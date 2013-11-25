@@ -4,7 +4,7 @@
 /* @var $form CActiveForm */
 ?>
 
-<form class="form-horizontal" role="form">
+<div class="form-horizontal" role="form">
 
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'word-form',
