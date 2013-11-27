@@ -42,6 +42,9 @@
 				array('label'=>'单词列表', 'url'=>array('/word/index')),
 				array('label'=>'添加单词', 'url'=>array('/word/create')),
 				array('label'=>'记忆统计', 'url'=>array('/word/info')),
+				array('label'=>'登录', 'url'=>array('site/login'), 'visible'=>Yii::app()->user->isGuest),
+				array('label'=>'注册', 'url'=>array('user/create'), 'visible'=>Yii::app()->user->isGuest),
+				array('label'=>'退出 ('.Yii::app()->user->name.')', 'url'=>array('site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 			),
 		)); 
 		?>		

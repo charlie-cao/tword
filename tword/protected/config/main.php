@@ -12,6 +12,7 @@ return array(
 	'defaultController'=>"word",
 	//默认语言
 	'language'=>'zh_cn',
+        'timeZone'=>'Asia/Chongqing',
 	
 	// preloading 'log' component
 	'preload'=>array('log'),
@@ -61,7 +62,7 @@ return array(
 			'connectionString' => 'mysql:host=localhost;dbname=tword',
 			'emulatePrepare' => true,
 			'username' => 'root',
-			'password' => '',
+			'password' => '123456',
 			'charset' => 'utf8',
 		),
 		
