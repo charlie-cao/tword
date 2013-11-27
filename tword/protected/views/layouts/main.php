@@ -15,7 +15,7 @@
     <!-- Custom styles for this template -->
     <link href="navbar-fixed-top.css" rel="stylesheet">
 	<style>
-	body { padding-top: 70px; }
+	body { padding-top: 70px; padding-bottom: 70px;}
 	</style>
 </head>
 
@@ -54,6 +54,14 @@
 <div class="container" id="page">
 	<?php echo $content; ?>
 </div><!-- page -->
+<div class="navbar-fixed-bottom" style="background-color: #eee;border-top: 2px solid #0e509e">
+    <ul class="nav row text-center">
+        <li class="col-xs-3"><a href="#"><span class="glyphicon glyphicon-adjust"></span><br>按钮</a></li>
+        <li class="col-xs-3"><a href="#"><span class="glyphicon glyphicon-adjust"></span><br>按钮</a></li>
+        <li class="col-xs-3"><a href="#"><span class="glyphicon glyphicon-adjust"></span><br>按钮</a></li>
+        <li class="col-xs-3 active"><a href="#"><span class="glyphicon glyphicon-adjust"></span><br>按钮</a></li>
+      </ul>
+</div>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
