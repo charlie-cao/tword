@@ -58,6 +58,10 @@ class WordController extends Controller {
      * If creation is successful, the browser will be redirected to the 'view' page.
      */
     public function actionCreate() {
+        if (!Yii::app()->user->getId() > 0) {
+            $this->redirect(array('site/login'));
+        }
+
         $model = new Word;
 
         // Uncomment the following line if AJAX validation is needed
@@ -104,6 +108,7 @@ class WordController extends Controller {
      * @param integer $id the ID of the model to be deleted
      */
     public function actionDelete($id) {
+
         $this->loadModel($id)->delete();
 
         // if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
@@ -115,10 +120,10 @@ class WordController extends Controller {
      * Lists all models.
      */
     public function actionIndex() {
-        if(!Yii::app()->user->getId()>0){
+        if (!Yii::app()->user->getId() > 0) {
             $this->redirect(array('site/login'));
         }
-        
+
         $dataProvider = new CActiveDataProvider('Word', array(
             'criteria' => array(
                 'condition' => 'user_id=' . Yii::app()->user->getId()
@@ -143,6 +148,10 @@ class WordController extends Controller {
     }
 
     public function actionInfo() {
+        if (!Yii::app()->user->getId() > 0) {
+            $this->redirect(array('site/login'));
+        }
+
         $data = array();
         $words = Word::model()->findAll();
         $data['word_count'] = count($words);

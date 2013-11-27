@@ -56,7 +56,7 @@ class Word extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'word' => 'Word',
+			'word' => '单词',
 			'translate' => 'Translate',
 			'phonetic' => 'Phonetic',
 			'user_id' => 'User',

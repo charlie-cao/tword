@@ -53,9 +53,9 @@ class User extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'username' => 'Username',
-			'password' => 'Password',
-			'create_time' => 'Create Time',
+			'username' => '用户名',
+			'password' => '密码',
+			'create_time' => '创建时间',
 		);
 	}
 

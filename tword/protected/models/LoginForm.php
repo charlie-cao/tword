@@ -29,6 +29,7 @@ class LoginForm extends CFormModel
 			array('password', 'authenticate'),
 		);
 	}
+        
 
 	/**
 	 * Declares attribute labels.
@@ -36,7 +37,9 @@ class LoginForm extends CFormModel
 	public function attributeLabels()
 	{
 		return array(
-			'rememberMe'=>'Remember me next time',
+			'username' => '用户名',
+			'password' => '密码',
+			'rememberMe'=>'记住登录',
 		);
 	}
 
