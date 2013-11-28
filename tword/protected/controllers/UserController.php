@@ -26,11 +26,11 @@ class UserController extends Controller {
     public function accessRules() {
         return array(
             array('allow', // allow authenticated user to perform 'create' and 'update' actions
-                'actions' => array('index', 'view','success','create', 'update'),
+                'actions' => array('index', 'view', 'success', 'create', 'update'),
                 'users' => array('*'),
             ),
             array('allow', // allow admin user to perform 'admin' and 'delete' actions
-                'actions' => array('admin', 'delete','success'),
+                'actions' => array('admin', 'delete', 'success'),
                 'users' => array('admin'),
             ),
             array('deny', // deny all users
@@ -60,10 +60,16 @@ class UserController extends Controller {
         // $this->performAjaxValidation($model);
 
         if (isset($_POST['User'])) {
-            $model->attributes = $_POST['User'];
-            $model->create_time = date("Y-m-d H:i:s");
-            if ($model->save())
-                $this->redirect(array('success', 'id' => $model->id));
+            $record = User::model()->findByAttributes(array('username' =>$_POST['User']['username']));
+            if (isset($record->username)) {
+                //该用户名已经存在 则为model增加错误显示
+                $model->addError('username','该用户名已经被其他人抢注啦.');
+            } else {
+                $model->attributes = $_POST['User'];
+                $model->create_time = date("Y-m-d H:i:s");
+                if ($model->save())
+                    $this->redirect(array('success', 'id' => $model->id));
+            }
         }
 
         $this->render('create', array(
