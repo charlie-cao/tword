@@ -15,8 +15,8 @@
         <!-- Custom styles for this template -->
         <link href="navbar-fixed-top.css" rel="stylesheet">
         <style>
-            body { padding-top: 70px; padding-bottom: 70px; font-size: 28px;}
-            .form-control {height: 50px;font-size: 28px;}
+            body { padding-top: 70px; padding-bottom: 70px; font-size: 16px;}
+            .form-control {height: 50px;font-size: 16px;}
             .activeM a{color: tomato;  }
         </style>
     </head>
