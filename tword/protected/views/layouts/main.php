@@ -30,7 +30,7 @@
 
     <body>
         <!-- Fixed navbar -->
-        <div class="navbar navbar-default navbar-fixed-top" role="navigation" style="background-color: #eee;border-bottom: 2px solid #0e509e">
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation" style="border-bottom: 2px solid #0e509e">
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -42,7 +42,6 @@
                     <a class="navbar-brand" href="#"><?php echo CHtml::encode($this->pageTitle); ?></a>
                 </div>
                 <div class="navbar-collapse collapse">
-
                     <?php
                     $this->widget('zii.widgets.CMenu', array(
                         'activeCssClass' => 'active',

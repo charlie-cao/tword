@@ -4,12 +4,7 @@
 /* @var $form CActiveForm  */
 
 $this->pageTitle = Yii::app()->name . ' - 登录';
-$this->breadcrumbs = array(
-    'Login',
-);
 ?>
-
-
 <?php
 $form = $this->beginWidget('CActiveForm', array(
     'id' => 'login-form',
@@ -19,7 +14,9 @@ $form = $this->beginWidget('CActiveForm', array(
     ),
         ));
 ?>
-
+<div class="text-center">
+    <img src="http://cli.clewm.net/qrcode/2013/11/28/1752408304.png" />
+</div>
 <div class="form-group">
     <?php echo $form->label($model, 'username'); ?>
     <?php echo $form->textField($model, 'username', array('class' => 'form-control')); ?>
@@ -37,6 +34,6 @@ $form = $this->beginWidget('CActiveForm', array(
         <?php echo $form->error($model, 'rememberMe'); ?>
     </label>
 </div>
-    <?php echo CHtml::submitButton(' 登录 ', array('class' => 'btn btn-success btn-lg btn-block')); ?> &nbsp;&nbsp;
+<?php echo CHtml::submitButton(' 登录 ', array('class' => 'btn btn-success btn-lg btn-block')); ?> &nbsp;&nbsp;
 <a href="<?= $this->createUrl("user/create") ?>" class="btn btn-info btn-lg btn-block">注册新用户</a>
 <?php $this->endWidget(); ?>

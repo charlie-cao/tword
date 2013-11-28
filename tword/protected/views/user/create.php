@@ -1,18 +1,7 @@
 <?php
 /* @var $this UserController */
 /* @var $model User */
-
-$this->breadcrumbs=array(
-	'Users'=>array('index'),
-	'Create',
-);
-
-$this->menu=array(
-	array('label'=>'List User', 'url'=>array('index')),
-	array('label'=>'Manage User', 'url'=>array('admin')),
-);
+$this->pageTitle = Yii::app()->name . ' - 用户注册';
 ?>
-
-<h1>用户注册</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>
