@@ -13,10 +13,10 @@
         <link href="<?php echo Yii::app()->request->baseUrl; ?>/public/bootstrap3/css/bootstrap.css" rel="stylesheet">
 
         <!-- Custom styles for this template -->
-        <link href="navbar-fixed-top.css" rel="stylesheet">
+        <!--link href="navbar-fixed-top.css" rel="stylesheet"-->
         <style>
             body { padding-top: 70px; padding-bottom: 70px; font-size: 16px;}
-            .form-control {height: 50px;font-size: 16px;}
+            .form-control {height: 46px;font-size: 16px;}
             .activeM a{color: tomato;  }
         </style>
     </head>
@@ -54,7 +54,7 @@
         <div class="container" id="page">
             <?php echo $content; ?>
         </div><!-- page -->
-        
+
         <div class="navbar-fixed-bottom nav-pills" style="background-color: #eee;border-top: 2px solid #0e509e">
             <?php
             $this->widget('zii.widgets.CMenu', array(
@@ -76,5 +76,10 @@
         <!-- Placed at the end of the document so the pages load faster -->
         <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
         <script src="<?php echo Yii::app()->request->baseUrl; ?>/public/bootstrap3/js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+            $(function() {
+//                alert("aa");
+            });
+        </script>
     </body>
 </html>
