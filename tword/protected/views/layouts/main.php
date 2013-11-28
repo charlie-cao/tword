@@ -69,11 +69,11 @@
                 'htmlOptions' => array('class' => 'nav row text-center '),
                 'encodeLabel' => false,
                 'items' => array(
-                    array('label' => '<span class="glyphicon glyphicon-dashboard"></span><br>记忆统计', 'url' => array('/word/info'), 'itemOptions' => array('class' => 'col-xs-3')),
-                    array('label' => '<span class="glyphicon glyphicon-list"></span><br>单词列表', 'url' => array('/word/index'), 'itemOptions' => array('class' => 'col-xs-3')),
-                    array('label' => '<span class="glyphicon glyphicon-plus"></span><br>添加单词', 'url' => array('/word/create'), 'itemOptions' => array('class' => 'col-xs-3')),
+                    array('label' => '<span class="glyphicon glyphicon-dashboard"></span><br>记忆', 'url' => array('/word/info'), 'itemOptions' => array('class' => 'col-xs-3')),
+                    array('label' => '<span class="glyphicon glyphicon-list"></span><br>列表', 'url' => array('/word/index'), 'itemOptions' => array('class' => 'col-xs-3')),
+                    array('label' => '<span class="glyphicon glyphicon-plus"></span><br>添加', 'url' => array('/word/create'), 'itemOptions' => array('class' => 'col-xs-3')),
                     array('label' => '<span class="glyphicon glyphicon-user"></span><br>登录', 'url' => array('site/login'), 'itemOptions' => array('class' => 'col-xs-3'), 'visible' => Yii::app()->user->isGuest),
-                    array('label' => '<span class="glyphicon glyphicon-log-out"></span><br>退出 (' . Yii::app()->user->name . ')', 'url' => array('site/logout'), 'itemOptions' => array('class' => 'col-xs-3'), 'visible' => !Yii::app()->user->isGuest)
+                    array('label' => '<span class="glyphicon glyphicon-log-out"></span><br>退出', 'url' => array('site/logout'), 'itemOptions' => array('class' => 'col-xs-3'), 'visible' => !Yii::app()->user->isGuest)
                 ),
             ));
             ?>	
