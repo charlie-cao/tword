@@ -19,6 +19,13 @@
             .form-control {height: 46px;font-size: 16px;}
             .activeM a{color: tomato;  }
         </style>
+        
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script src="<?php echo Yii::app()->request->baseUrl; ?>/public/bootstrap3/js/bootstrap.min.js"></script>
+
     </head>
 
     <body>
@@ -71,15 +78,5 @@
             ));
             ?>	
         </div>
-        <!-- Bootstrap core JavaScript
-        ================================================== -->
-        <!-- Placed at the end of the document so the pages load faster -->
-        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-        <script src="<?php echo Yii::app()->request->baseUrl; ?>/public/bootstrap3/js/bootstrap.min.js"></script>
-        <script type="text/javascript">
-            $(function() {
-//                alert("aa");
-            });
-        </script>
     </body>
 </html>
