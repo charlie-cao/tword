@@ -2,16 +2,6 @@
 /* @var $this WordController */
 /* @var $model Word */
 
-$this->breadcrumbs=array(
-	'Words'=>array('index'),
-	'Manage',
-);
-
-$this->menu=array(
-	array('label'=>'List Word', 'url'=>array('index')),
-	array('label'=>'Create Word', 'url'=>array('create')),
-);
-
 Yii::app()->clientScript->registerScript('search', "
 $('.search-button').click(function(){
 	$('.search-form').toggle();
@@ -26,14 +16,11 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Manage Words</h1>
+<h1>管理单词</h1>
 
-<p>
-You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
-or <b>=</b>) at the beginning of each of your search values to specify how the comparison should be done.
-</p>
 
-<?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button')); ?>
+
+<?php echo CHtml::link('高级搜索','#',array('class'=>'search-button')); ?>
 <div class="search-form" style="display:none">
 <?php $this->renderPartial('_search',array(
 	'model'=>$model,

@@ -1,4 +1,6 @@
-
+<?php
+$this->pageTitle = Yii::app()->name . ' - 记忆统计';
+?>
 <div class="bs-callout bs-callout-warning" style="text-align: center">
     <h3>今天记住了<?= $word_count ?>个单词</h3>
     <div class="progress progress-striped active">
@@ -30,7 +32,7 @@
     <span class="glyphicon glyphicon-star"></span> 采集新单词
 </a>
 
-<a class="btn btn-danger  btn-lg btn-block"   >
+<a class="btn btn-danger  btn-lg btn-block" href="<?= $this->createUrl("word/view&id=1") ?>">
     <span class="glyphicon glyphicon-registration-mark"></span> 再记一个单词
 </a>
 

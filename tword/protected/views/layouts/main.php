@@ -48,7 +48,7 @@
                         'activeCssClass' => 'active',
                         'htmlOptions' => array('class' => 'nav navbar-nav navbar-right'),
                         'items' => array(
-                            array('label' => '帮助', 'url' => array('/word/index')),
+                            array('label' => '帮助', 'url' => array('site/page', 'view'=>'help')),
                             array('label' => '登录', 'url' => array('site/login'), 'visible' => Yii::app()->user->isGuest),
                             array('label' => '退出 (' . Yii::app()->user->name . ')', 'url' => array('site/logout'), 'visible' => !Yii::app()->user->isGuest)
                         ),
