@@ -15,7 +15,7 @@ $form = $this->beginWidget('CActiveForm', array(
         ));
 ?>
 <div class="text-center">
-    <img src="http://cli.clewm.net/qrcode/2013/11/28/1752408304.png" />
+    <img style="width: 150px; height: 150px; border: 6px solid #FFA0A2" src="http://cli.clewm.net/qrcode/2013/11/28/1752408304.png" />
 </div>
 <div class="form-group">
     <?php echo $form->label($model, 'username'); ?>
