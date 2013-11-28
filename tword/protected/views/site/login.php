@@ -37,6 +37,6 @@ $form = $this->beginWidget('CActiveForm', array(
         <?php echo $form->error($model, 'rememberMe'); ?>
     </label>
 </div>
-    <?php echo CHtml::submitButton(' 登录 ', array('class' => 'btn btn-success')); ?> &nbsp;&nbsp;
-<a href="<?= $this->createUrl("user/create") ?>" class="btn btn-info">注册新用户</a>
+    <?php echo CHtml::submitButton(' 登录 ', array('class' => 'btn btn-success btn-lg btn-block')); ?> &nbsp;&nbsp;
+<a href="<?= $this->createUrl("user/create") ?>" class="btn btn-info btn-lg btn-block">注册新用户</a>
 <?php $this->endWidget(); ?>
