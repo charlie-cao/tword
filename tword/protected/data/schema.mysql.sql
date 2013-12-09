@@ -26,3 +26,11 @@ INSERT INTO tbl_user (username, password, email) VALUES ('test18', 'pass18', 'te
 INSERT INTO tbl_user (username, password, email) VALUES ('test19', 'pass19', 'test19@example.com');
 INSERT INTO tbl_user (username, password, email) VALUES ('test20', 'pass20', 'test20@example.com');
 INSERT INTO tbl_user (username, password, email) VALUES ('test21', 'pass21', 'test21@example.com');
+
+CREATE TABLE  `tword`.`tbl_suggestion` (
+`id` INT NOT NULL AUTO_INCREMENT ,
+`email` VARCHAR( 255 ) NOT NULL ,
+`content` TEXT NOT NULL ,
+`c_time` INT NOT NULL ,
+PRIMARY KEY (  `id` )
+) ENGINE = MYISAM COMMENT =  '意见';
