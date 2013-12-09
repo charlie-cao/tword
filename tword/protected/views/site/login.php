@@ -37,12 +37,9 @@ $form = $this->beginWidget('CActiveForm', array(
 <?php echo CHtml::submitButton(' 登录 ', array('class' => 'btn btn-success btn-lg btn-block')); ?> &nbsp;&nbsp;
 <a href="<?= $this->createUrl("user/create") ?>" class="btn btn-info btn-lg btn-block">注册新用户</a>
 <?php $this->endWidget(); ?>
-<div class="center-block">
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" style="text-align: center; padding-top: 20px;">
 <input type="hidden" name="cmd" value="_s-xclick">
 <input type="hidden" name="hosted_button_id" value="6CJQPR85F8EUJ">
 <input type="image" src="https://www.paypalobjects.com/zh_XC/C2/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal——最安全便捷的在线支付方式！">
 <img alt="" border="0" src="https://www.paypalobjects.com/zh_XC/i/scr/pixel.gif" width="1" height="1">
 </form>
-</div>
-
