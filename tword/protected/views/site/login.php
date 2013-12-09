@@ -56,5 +56,5 @@ $form = $this->beginWidget('CActiveForm', array(
 </script>
 
 <!-- 广告位：记单词登录页 -->
-<script type="text/javascript" >BAIDU_CLB_SLOT_ID = "825248";</script>
-<script type="text/javascript" src="http://cbjs.baidu.com/js/o.js"></script>
+<!--script type="text/javascript" >BAIDU_CLB_SLOT_ID = "825248";</script>
+<script type="text/javascript" src="http://cbjs.baidu.com/js/o.js"></script-->
