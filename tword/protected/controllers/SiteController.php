@@ -73,7 +73,6 @@ class SiteController extends Controller {
 
 //        var_dump(Yii::app()->user->getName());
 //        var_dump(Yii::app()->user->getIsGuest());
-
         // if it is ajax validation request
         if (isset($_POST['ajax']) && $_POST['ajax'] === 'login-form') {
             echo CActiveForm::validate($model);
@@ -98,13 +97,26 @@ class SiteController extends Controller {
         Yii::app()->user->logout();
         $this->redirect(Yii::app()->homeUrl);
     }
-    
+
     /**
      * pay 
      */
-    public function actionPay(){
-        $this->render("pay");
+    public function actionPay() {
+        $model = new Suggestion;
+
+        // Uncomment the following line if AJAX validation is needed
+        // $this->performAjaxValidation($model);
+
+        if (isset($_POST['Suggestion'])) {
+            $model->attributes = $_POST['Suggestion'];
+            $model->c_time = time();
+            if ($model->save())
+                $this->redirect(array('pay', 'id' => $model->id));
+        }
+
+        $this->render('pay', array(
+            'model' => $model,
+        ));
     }
-    
 
 }
